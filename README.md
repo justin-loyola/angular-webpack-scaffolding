@@ -1,0 +1,1 @@
+Scaffolding for an Angular 1.x project using Webpack, Sass, and Karma/Jasmine
