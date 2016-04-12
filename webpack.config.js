@@ -17,7 +17,11 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.json$/, loader: "json-loader"
+                test: /\.spec.js$/,
+                loader: 'istanbul-instrumenter'
+            },
+            {
+                test: /\.json$/, loader: 'json-loader'
             },
             {
                 test: /\.css$/,

@@ -27,14 +27,13 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      './app/**/*.js': ['webpack']
+      './app/**/*.spec.js': ['webpack']
     },
 
     webpack: webpackConfig,
 
     plugins: [
       'karma-phantomjs-launcher',
-      'karma-coverage',
       'webpack',
       'karma-webpack',
       'karma-html-reporter',
@@ -45,10 +44,10 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress', 'coverage', 'html'],
+    reporters: ['progress', 'html'],
     htmlReporter: {
       outputDir: __dirname + '/karma_report',
-      templatePath: __dirname + '/../node_modules/karma-html-reporter/jasmine_template.html'
+      templatePath: __dirname + '/node_modules/karma-html-reporter/jasmine_template.html'
     },
 
     // web server port
